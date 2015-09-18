@@ -5,5 +5,4 @@ dependencies:
 
 test:
   override:
-    - ls 
-    - cd minimal
+    - ./terraform plan 
