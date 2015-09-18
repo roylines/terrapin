@@ -9,7 +9,9 @@ test:
     - ./terraform remote pull
     - ./terraform plan -out=terraform.plan
 
-deploy:
-  master:
-    - ./terraform apply terraform.plan
-    - ./terraform remote push
+deployment:
+  production:
+    branch: master
+    commands:
+      - ./terraform apply terraform.plan
+      - ./terraform remote push
