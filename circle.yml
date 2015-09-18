@@ -1,7 +1,7 @@
 dependencies:
   pre:
     - wget https://dl.bintray.com/mitchellh/terraform/terraform_0.6.3_linux_amd64.zip -o terraform.zip
-    - unzip terraform
+    - unzip ./terraform.zip
   cache_directories:
     - terraform
 
