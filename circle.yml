@@ -5,4 +5,11 @@ dependencies:
 
 test:
   override:
-    - ./terraform plan -out=. 
+    - ./terraform remote config -backend=S3 -backend-config="bucket=$BUCKET" -backend-config="key=$KEY"
+    - ./terraform remote pull
+    - ./terraform plan -out=terraform.plan
+
+deploy:
+  master:
+    - ./terraform apply terraform.plan
+    - ./terraform remote push
