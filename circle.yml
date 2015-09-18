@@ -11,7 +11,7 @@ test:
 
 deployment:
   production:
-    branch: master
+    branch: masterx
     commands:
       - ./terraform apply terraform.plan
       - ./terraform remote push
