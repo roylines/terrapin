@@ -1,2 +1,2 @@
 # terrapin
-playing around with terraform
+Minimal terraform AWS provisioning via CircleCI
